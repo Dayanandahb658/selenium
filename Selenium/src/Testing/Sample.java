@@ -21,7 +21,7 @@ public class Sample
 	//System.out.println(driver.getTitle());
 	String Expected=driver.getTitle();
 	Assert.assertEquals(Actual, Expected);
-	driver.quit();
+
 	}
 }
      
