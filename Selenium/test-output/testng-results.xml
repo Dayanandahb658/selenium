@@ -2,15 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-30T16:25:17 IST" name="Default suite" finished-at="2023-05-30T16:25:17 IST" duration-ms="51">
+  <suite started-at="2023-05-30T17:30:12 IST" name="Default suite" finished-at="2023-05-30T17:30:12 IST" duration-ms="41">
     <groups>
     </groups>
-    <test started-at="2023-05-30T16:25:17 IST" name="Default test" finished-at="2023-05-30T16:25:17 IST" duration-ms="51">
+    <test started-at="2023-05-30T17:30:12 IST" name="Default test" finished-at="2023-05-30T17:30:12 IST" duration-ms="41">
       <class name="Testing.Demo1">
-        <test-method signature="Sample2()[pri:0, instance:Testing.Demo1@65466a6a]" started-at="2023-05-30T16:25:17 IST" name="Sample2" finished-at="2023-05-30T16:25:17 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="Best6()[pri:0, instance:Testing.Demo1@64cd705f]" started-at="2023-05-30T17:30:12 IST" name="Best6" finished-at="2023-05-30T17:30:12 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Sample2 -->
+        </test-method> <!-- Best6 -->
+        <test-method is-config="true" signature="Best2()[pri:0, instance:Testing.Demo1@64cd705f]" started-at="2023-05-30T17:30:12 IST" name="Best2" finished-at="2023-05-30T17:30:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Best2 -->
+        <test-method is-config="true" signature="Best3()[pri:0, instance:Testing.Demo1@64cd705f]" started-at="2023-05-30T17:30:12 IST" name="Best3" finished-at="2023-05-30T17:30:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Best3 -->
+        <test-method is-config="true" signature="Best5()[pri:0, instance:Testing.Demo1@64cd705f]" started-at="2023-05-30T17:30:12 IST" name="Best5" finished-at="2023-05-30T17:30:12 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Best5 -->
+        <test-method signature="Best1()[pri:0, instance:Testing.Demo1@64cd705f]" started-at="2023-05-30T17:30:12 IST" name="Best1" finished-at="2023-05-30T17:30:12 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Best1 -->
       </class> <!-- Testing.Demo1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
