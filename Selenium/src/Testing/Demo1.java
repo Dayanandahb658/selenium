@@ -1,5 +1,6 @@
 package Testing;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
@@ -48,4 +49,9 @@ public class Demo1
  	{
  		System.out.println("Best6");
  	}
+     @AfterClass
+  	public void Best7() 
+  	{
+  		System.out.println("Best7");
+  	}
 	}
