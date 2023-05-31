@@ -1,11 +1,15 @@
 package Testing;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 //port org.testng.annotations.Test;
@@ -19,17 +23,20 @@ public class Demo1
 //  System.out.println("jkjkjuui");
 //  }
 //}
-	@Test
-	public void Best1() 
-	{
+	@Parameters("url")
+//Test(priority = 3)
+	public void Best1(String url)	{
+		WebDriver driver=new ChromeDriver();
+		driver.get(url);
+		
 	 System.out.println("Best1");
 	}
-	@BeforeTest
+	@Test(priority =2)
 	public void Best2() 
 	{
 		System.out.println("Best2");
 	}
-	@BeforeClass
+	@Test(priority =1)
 	public void Best3() 
 	{
 		System.out.println("Best3");
@@ -54,4 +61,10 @@ public class Demo1
   	{
   		System.out.println("Best7");
   	}
+     @AfterTest
+   	public void Best() 
+   	{
+   		System.out.println("Best7");
+   	}
+      
 	}

@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testing.Sample">
+      <class name="Testing.Demo1">
         <methods>
-          <include name="Login"/>
+          <include name="Best1"/>
+          <include name="Best"/>
+          <include name="Best5"/>
+          <include name="Best6"/>
+          <include name="Best7"/>
         </methods>
-      </class> <!-- Testing.Sample -->
+      </class> <!-- Testing.Demo1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
