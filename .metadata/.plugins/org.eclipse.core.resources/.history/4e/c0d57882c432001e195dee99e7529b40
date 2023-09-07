@@ -1,0 +1,53 @@
+package simple;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.tutorials.utilities.Demo7;
+
+public class Register 
+{
+	@Test
+ public void Regis() throws InterruptedException
+ {
+	 WebDriver driver =new ChromeDriver();
+	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	  driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+	  driver.get("https://tutorialsninja.com/demo/");
+	  driver.manage().window().maximize();
+	 //driver.findElement(By.xpath("//span[.='My Account']")).click();
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[.='My Account']"))).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("(//a[.=\"Register\"])[1]")).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("namma");
+	 driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("nimma");
+	 driver.findElement(By.xpath("//input[@name='email']")).sendKeys(Demo7.Sample2());
+	 driver.findElement(By.xpath("//input[@name='telephone']")).sendKeys("8710926782");
+	 driver.findElement(By.xpath("//input[@name='password']")).sendKeys("1234");
+	 driver.findElement(By.xpath("//input[@name='confirm']")).sendKeys("1234");
+	 driver.findElement(By.xpath("//input[@name='agree']")).click();
+	 driver.findElement(By.xpath("//input[@value='Continue']")).click();
+	 //String Expected="Your Account Has Been ";
+	String Actual=driver.findElement(By.xpath("(//*[.='Your Account Has Been Created!'])[2]")).getText();
+	String Expected="Your Account Has Been Created!";
+	System.out.println(Actual);
+	//
+	Assert.assertEquals(Expected, Actual);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[.='My Account']"))).click();
+	driver.findElement(By.xpath("(//*[.=\"Logout\"])[2]")).click();
+	driver.quit();
+	 
+	 
+	 
+}
+ }
+
